@@ -15,7 +15,8 @@ namespace ESP8266_IoT {
         //% block="on"
         on = 1,
         //% block="off"
-        off = 2
+        off = 2	
+		
     }
 
     export enum SchemeList {
@@ -74,7 +75,7 @@ namespace ESP8266_IoT {
 
     let TStoSendStr = ""
 
-    // write AT command with CR+LF ending
+    // write AT command with CR+LF ending xxxxxxxxxxxxxxxxxxxx
     function sendAT(command: string, wait: number = 0) {
         serial.writeString(`${command}\u000D\u000A`)
         basic.pause(wait)
