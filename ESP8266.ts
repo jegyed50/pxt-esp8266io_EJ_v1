@@ -75,7 +75,7 @@ namespace ESP8266_IoT {
 
     let TStoSendStr = ""
 
-    // write AT command with CR+LF ending xxxxxxxxxxxxxxxxxxxx
+    // write AT command with CR+LF ending  yyyyyyyyyyyyyyyyyyyyyyyyyyy
     function sendAT(command: string, wait: number = 0) {
         serial.writeString(`${command}\u000D\u000A`)
         basic.pause(wait)
